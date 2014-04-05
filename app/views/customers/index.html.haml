@@ -1,0 +1,17 @@
+%table  
+  %tr 
+    %th
+      Name
+    %th
+      Email
+    %th
+      Mobile
+  
+- @user.each do |user|
+  %tr
+    %td
+      = user.name
+    %td
+      = user.email
+    %td
+      = user.mobile

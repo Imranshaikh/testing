@@ -1,0 +1,17 @@
+%table.table.table-bordered
+  %tr
+    %th Name
+    %th Salary
+    %th Actions
+  - @employees.each do |employee|
+    %tr
+      %td
+        = employee.name
+      %td
+        = employee.salary
+      %td
+        = link_to 'Show', employee, :class => "btn btn-info"
+        = link_to 'Edit', edit_employee_path(employee), :class => "btn btn-warning"
+        = link_to 'Destroy', employee, :class => "btn btn-danger", confirm: 'Are you sure?', method: :delete
+%br
+= link_to 'New Employee', new_employee_path

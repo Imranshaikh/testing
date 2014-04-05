@@ -1,0 +1,17 @@
+%p#notice
+  = notice
+%table.table.table-bordered
+  %tr
+    %td
+      Name:
+    %td
+      = @employee.name
+  %tr
+    %td
+      Salary:
+    %td
+      = @employee.salary
+
+= image_tag @employee.avatar.url(:thumb), :class => "img-rounded"
+= link_to 'Edit', edit_employee_path(@employee), :class => "btn btn-info"
+= link_to 'Back', employees_path, :class => "btn btn-primary"
